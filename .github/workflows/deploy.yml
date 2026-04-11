@@ -41,7 +41,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages deploy . --project-name wheelbot-site --branch main
+          command: pages deploy . --project-name wheelbot --branch main
 
       - name: Verify deployment
         run: |
