@@ -1,6 +1,10 @@
-name: Deploy wheelbot.io
+name: Deploy — wheelbot.io
 
-# push to main → production deploy to Cloudflare Pages (no build step — static HTML)
+# Deploys to Cloudflare Pages production on semver tag push (v*).
+# Tags are pushed automatically by "Release — Auto Tag" after CI passes on main.
+# Manual dispatch lets you force a deploy.
+#
+# Validation runs separately in "CI — wheelbot.io" on every push to main.
 #
 # Required secrets:
 #   CF_API_TOKEN   — Cloudflare API token (Pages:Edit)
@@ -8,7 +12,8 @@ name: Deploy wheelbot.io
 
 on:
   push:
-    branches: ["main"]
+    tags:
+      - "v*"
   workflow_dispatch:
 
 jobs:
@@ -21,7 +26,10 @@ jobs:
       deployments: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
 
       - name: Validate key files exist
         run: |
@@ -58,6 +66,7 @@ jobs:
         if: always()
         run: |
           echo "## Site Deployed" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Tag:** ${{ github.ref_name }}" >> "$GITHUB_STEP_SUMMARY"
           echo "- **URL:** https://wheelbot.io" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Commit:** ${{ github.sha }}" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Time:** $(date -u)" >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,55 @@
+name: CI — wheelbot.io
+
+# Runs on every push to main and on pull requests.
+# Validates that required static files exist.
+# On success (main branch), "Release — Auto Tag" bumps the patch version,
+# which triggers "Deploy — wheelbot.io".
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate static site
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate key files exist
+        run: |
+          MISSING=0
+          for f in index.html; do
+            if [ -f "$f" ]; then
+              echo "✓ $f"
+            else
+              echo "✗ $f missing"
+              MISSING=$((MISSING+1))
+            fi
+          done
+          [ $MISSING -eq 0 ] || exit 1
+
+      - name: Check for broken internal links (basic)
+        run: |
+          echo "Checking for empty href/src attributes..."
+          HITS=$(grep -rn 'href=""' . --include="*.html" 2>/dev/null | wc -l || true)
+          if [ "$HITS" -gt 0 ]; then
+            echo "⚠ Found $HITS empty href attributes"
+          else
+            echo "✓ No empty href attributes"
+          fi
+
+      - name: Job summary
+        if: always()
+        run: |
+          echo "## CI — wheelbot.io" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Branch:** ${{ github.ref_name }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Commit:** ${{ github.sha }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Time:** $(date -u)" >> "$GITHUB_STEP_SUMMARY"

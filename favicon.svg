@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>WheelBot</title>
+  <defs>
+    <radialGradient id="wb-bg" cx="50%" cy="42%" r="56%">
+      <stop offset="0%" stop-color="#0d1f14"/>
+      <stop offset="100%" stop-color="#060b0f"/>
+    </radialGradient>
+    <radialGradient id="wb-hub" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#0f2318"/>
+      <stop offset="100%" stop-color="#080c10"/>
+    </radialGradient>
+    <radialGradient id="wb-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e87a" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#00e87a" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="wb-clip">
+      <circle cx="50" cy="50" r="50"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#wb-clip)">
+    <circle cx="50" cy="50" r="50" fill="url(#wb-bg)"/>
+    <circle cx="50" cy="50" r="49" fill="none" stroke="#0d2218" stroke-width="0.5"/>
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#00e87a" stroke-width="0.45" stroke-dasharray="2.31 1.68" opacity="0.18"/>
+    <line x1="50" y1="0" x2="50" y2="100" stroke="#0d2218" stroke-width="0.3"/>
+    <line x1="0" y1="50" x2="100" y2="50" stroke="#0d2218" stroke-width="0.3"/>
+    <line x1="14.5" y1="14.5" x2="85.5" y2="85.5" stroke="#0d2218" stroke-width="0.3"/>
+    <line x1="85.5" y1="14.5" x2="14.5" y2="85.5" stroke="#0d2218" stroke-width="0.3"/>
+    <circle cx="50" cy="50" r="34" fill="none" stroke="#0d2218" stroke-width="0.375"/>
+    <line x1="50" y1="16" x2="50" y2="19.5" stroke="#1a3d28" stroke-width="0.625" stroke-linecap="round"/>
+    <line x1="84" y1="50" x2="80.5" y2="50" stroke="#1a3d28" stroke-width="0.625" stroke-linecap="round"/>
+    <line x1="50" y1="84" x2="50" y2="80.5" stroke="#1a3d28" stroke-width="0.625" stroke-linecap="round"/>
+    <line x1="16" y1="50" x2="19.5" y2="50" stroke="#1a3d28" stroke-width="0.625" stroke-linecap="round"/>
+    <circle cx="50" cy="50" r="37.5" fill="url(#wb-glow)"/>
+    <path d="M50,8 A42,42,0,0,1,92,50" fill="none" stroke="#00e87a" stroke-width="0.75" stroke-linecap="round" opacity="0.88"/>
+    <circle cx="50" cy="8" r="1.5" fill="#00e87a"/>
+    <circle cx="50" cy="8" r="2.75" fill="none" stroke="#00e87a" stroke-width="0.3" opacity="0.25"/>
+    <circle cx="50" cy="8" r="4.25" fill="none" stroke="#00e87a" stroke-width="0.3" opacity="0.1"/>
+    <circle cx="92" cy="50" r="1.375" fill="#00e87a" opacity="0.9"/>
+    <circle cx="92" cy="50" r="2.5" fill="none" stroke="#00e87a" stroke-width="0.3" opacity="0.22"/>
+    <circle cx="50" cy="50" r="20" fill="#080c10" stroke="#0f2318" stroke-width="0.625"/>
+    <circle cx="50" cy="50" r="19" fill="url(#wb-hub)"/>
+    <circle cx="50" cy="50" r="18.25" fill="none" stroke="#0d2218" stroke-width="0.25"/>
+    <polyline points="40.12,44.78 42.42,55.23 44.72,50.21 47.02,55.23 49.32,44.78"
+      fill="none" stroke="#00e87a" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="50.38" y1="44.78" x2="50.38" y2="55.23" stroke="#00e87a" stroke-width="1.62" stroke-linecap="round"/>
+    <path d="M50.38,44.78 L55.40,44.78 Q58.53,44.78 58.53,47.70 Q58.53,50.00 50.38,50.00"
+      fill="none" stroke="#00e87a" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50.38,50.00 L56.02,50.00 Q59.37,50.00 59.37,52.84 Q59.37,55.23 50.38,55.23"
+      fill="none" stroke="#00e87a" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
