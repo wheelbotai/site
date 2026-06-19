@@ -483,7 +483,7 @@
   }
 
   .price-card.featured::after {
-    content: 'MOST REQUESTED';
+    content: 'MOST POPULAR';
     position: absolute;
     top: -1px; right: 20px;
     background: var(--green);
@@ -1007,14 +1007,14 @@
     <li><a href="#pricing">Plans</a></li>
     <li><a href="#founder">About</a></li>
     <li><a href="mailto:wheelbotai@gmail.com">Contact</a></li>
-    <li><a href="#" class="nav-cta" data-tally-open="0QvlNB" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" aria-haspopup="dialog">Join Waitlist</a></li>
+    <li><a href="https://app.wheelbot.io/sign-up" class="nav-cta">Start free trial</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section id="hero" aria-label="Hero">
   <div class="hero">
-    <div class="hero-badge" role="status">Early Access — Waitlist Open</div>
+    <div class="hero-badge" role="status">Now Live — Free Trial</div>
     <h1>The Wheel<br>Strategy.<br><span class="accent">Systematized.<br>Automated.</span></h1>
     <p class="hero-sub">
       Never miss a morning entry. Never hold a loser past your rules.
@@ -1050,11 +1050,11 @@
     </p>
 
     <div class="cta-group">
-      <a href="#" class="btn-primary" data-tally-open="0QvlNB" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" aria-haspopup="dialog" role="button">
-        ⚡ Join the Waitlist
+      <a href="https://app.wheelbot.io/sign-up" class="btn-primary" role="button">
+        ⚡ Start free trial
       </a>
-      <a href="#how-it-works" class="btn-secondary" aria-label="Learn how WheelBot works">
-        → See How It Works
+      <a href="#pricing" class="btn-secondary" aria-label="See WheelBot plans and pricing">
+        → See Plans
       </a>
     </div>
 
@@ -1165,92 +1165,97 @@
 
 <div class="divider"></div>
 
-<!-- WHAT'S COMING -->
+<!-- PRICING -->
 <section id="pricing">
   <div class="section-inner">
-    <div class="section-label">Three Ways to Use WheelBot</div>
-    <h2>Pick Your Level<br>of Involvement.</h2>
+    <div class="section-label">Plans &amp; Pricing</div>
+    <h2>Three Plans.<br>Pick Yours.</h2>
     <p style="color:var(--muted);max-width:640px;margin-bottom:16px;font-size:0.95rem;">
-      This is a waitlist — not a product for sale yet. We're building based on what the community actually needs.
-      Tell us which direction resonates most. Your vote shapes what ships first.
+      Every plan automates <em>your</em> rules on <em>your</em> account. You set the watchlist, the parameters, and the
+      risk limits — the bot executes them. WheelBot does not select securities for you or advise on suitability.
     </p>
     <!-- Status bar -->
-    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:48px;">
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:32px;">
       <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--green);">✓ Tradier API · Live since Mar 15</span>
       <div style="width:1px;height:20px;background:var(--border);"></div>
-      <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);">No credit card · No commitment</span>
+      <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);">Free trial · Card required · Cancel anytime</span>
       <div style="width:1px;height:20px;background:var(--border);"></div>
-      <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);">Waitlist open now</span>
+      <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);">Save 2 months on annual</span>
+    </div>
+
+    <!-- DAILY SIGNAL — free lead magnet (pre-onboarding, not a plan) -->
+    <div style="background:var(--panel);border:1px dashed var(--border);border-radius:8px;padding:22px 26px;max-width:980px;margin-bottom:32px;display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:space-between;">
+      <div style="flex:1;min-width:260px;">
+        <div style="font-family:'DM Mono',monospace;font-size:0.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:6px;">Free · No account needed</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.06em;color:var(--white);">Daily Signal</div>
+        <div style="font-size:0.84rem;color:var(--muted);line-height:1.7;margin-top:4px;">
+          Drop your email and get a sample of the morning scan — top candidates ranked by IV Rank, delta, and
+          technicals, with the AI's rationale. Works with any broker. No card, no commitment — see the engine before you start a trial.
+        </div>
+      </div>
+      <button class="btn-tier outline" style="width:auto;padding:12px 22px;white-space:nowrap;" data-tally-open="0QvlNB" data-tally-overlay="1" data-tally-hide-title="0" data-tally-emoji-text="📬" data-tally-emoji-animation="wave">Email me a sample →</button>
     </div>
 
     <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 980px;">
 
-      <!-- OPTION A -->
+      <!-- STARTER -->
       <div class="price-card">
-        <div class="price-tier">Option A</div>
-        <div class="price-name">Daily Signal</div>
-        <div class="price-amount" style="font-size:1.3rem;padding-top:4px;color:var(--green);">Free</div>
-        <div class="price-desc">Every morning, an AI-powered scan of your configured watchlist — top candidates ranked by IV Rank, delta, and technical conditions — delivered to your inbox. You decide what to trade and when.</div>
+        <div class="price-tier">Paper-first</div>
+        <div class="price-name">Starter</div>
+        <div class="price-amount">$49<span>/mo</span></div>
+        <div class="price-desc" style="min-height:auto;">or $490/yr (2 months free). 7-day free trial.</div>
         <ul class="price-features">
-          <li>Top 5 CSP/CC candidates by 9am ET — ranked by IV Rank, delta proximity, and technical conditions</li>
-          <li>Optimal strike, DTE &amp; premium target</li>
-          <li>IV Rank filter — only high-IV candidates</li>
-          <li>VIX regime flag — avoid dangerous days</li>
-          <li>MACD + RSI technical confirmation</li>
-          <li>AI filter rationale — what criteria each candidate met or missed</li>
-          <li>Works with any broker</li>
-          <li class="dim">No dashboard access</li>
-          <li class="dim">No automated execution</li>
+          <li>Automated Wheel — cash-secured puts + covered calls</li>
+          <li>Paper trading — prove the rules before risking capital</li>
+          <li>Up to 5 watchlist symbols</li>
+          <li>Full dashboard, positions &amp; analytics</li>
+          <li>VIX regime gate + exposure caps</li>
+          <li>90 days of trade history</li>
+          <li class="dim">Paper only — upgrade to Autopilot for live trading</li>
         </ul>
-        <button class="btn-tier outline" data-tally-open="0QvlNB" data-tally-overlay="1" data-tally-hide-title="0" data-tally-emoji-text="📬" data-tally-emoji-animation="wave">I want this →</button>
+        <button class="btn-tier outline" onclick="window.location.href='https://app.wheelbot.io/sign-up?plan=starter'">Start 7-day trial →</button>
       </div>
 
-      <!-- OPTION B -->
-      <div class="price-card">
-        <div class="price-tier">Option B</div>
-        <div class="price-name">Trade Journal</div>
-        <div class="price-amount" style="font-size:1.3rem;padding-top:4px;color:var(--text);">Paid <span>— pricing TBD</span></div>
-        <div class="price-desc">Connect your Tradier account, sync your trades automatically, and get AI-powered coaching that reviews your positions and flags rule violations every evening.</div>
-        <ul class="price-features">
-          <li>Everything in Daily Signal</li>
-          <li>Performance dashboard — coming soon</li>
-          <li>Auto-sync all your Tradier trades</li>
-          <li>P&amp;L by symbol, type &amp; expiry</li>
-          <li>Win rate + premium capture by ticker</li>
-          <li>AI end-of-day journal review</li>
-          <li>Rule-violation pattern detection</li>
-          <li>Assignment &amp; roll history log</li>
-          <li class="dim">No automated execution</li>
-        </ul>
-        <button class="btn-tier outline" data-tally-open="0QvlNB" data-tally-overlay="1" data-tally-hide-title="0" data-tally-emoji-text="📊" data-tally-emoji-animation="wave">I want this →</button>
-      </div>
-
-      <!-- OPTION C — FEATURED -->
+      <!-- AUTOPILOT — FEATURED -->
       <div class="price-card featured">
-        <div class="price-tier">Option C</div>
+        <div class="price-tier">Live trading</div>
         <div class="price-name">Autopilot</div>
-        <div class="price-amount" style="font-size:1.3rem;padding-top:4px;">Premium <span>— pricing TBD</span></div>
-        <div class="price-desc">Your rules, automated. You configure your watchlist, delta range, DTE window, IVR floor, and risk limits — the bot runs your parameters every morning, evaluates strikes against your criteria, places limit orders, and manages rolls and exits per your settings.</div>
+        <div class="price-amount">$99<span>/mo</span></div>
+        <div class="price-desc" style="min-height:auto;">or $990/yr (2 months free). 14-day free trial.</div>
         <ul class="price-features">
-          <li>Everything in Trade Journal</li>
-          <li>Fully automated CSP + CC order placement</li>
-          <li>Daily scan across 20+ Wheel tickers</li>
-          <li>Live Greeks via ORATS — ~0.25 delta targeting</li>
-          <li>Limit order price-walk for best fills</li>
-          <li>Auto-roll: delta breach, earnings, expiry</li>
-          <li>VIX regime gate — auto-pauses in spikes</li>
-          <li>Per-symbol exposure &amp; contract caps</li>
+          <li>Everything in Starter</li>
+          <li>Live trading on your Tradier account</li>
+          <li>Up to 15 watchlist symbols</li>
           <li>AI morning briefing + EOD review</li>
-          <li>Kill switch — close all positions instantly</li>
-          <li>Requires Tradier brokerage account</li>
+          <li>Live IV Rank + earnings calendar</li>
+          <li>Short-DTE scanner</li>
+          <li>Slack + email alerts</li>
+          <li>Manual approvals + kill switch</li>
+          <li>1 year of trade history</li>
         </ul>
-        <p style="font-size:0.8rem;color:var(--muted);line-height:1.7;margin-bottom:16px;border-top:1px solid var(--border);padding-top:14px;">
-          You configure everything: your watchlist, delta range, DTE window, IVR floor, position sizing, VIX pause level, and AI filter instructions. The bot executes your rules exactly. WheelBot does not select securities for you, advise on suitability, or override your parameters.
-        </p>
-        <button class="btn-tier primary" data-tally-open="0QvlNB" data-tally-overlay="1" data-tally-hide-title="0" data-tally-emoji-text="🤖" data-tally-emoji-animation="wave">I want this →</button>
+        <button class="btn-tier primary" onclick="window.location.href='https://app.wheelbot.io/sign-up?plan=autopilot'">Start 14-day trial →</button>
         <p style="font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--amber);margin-top:10px;line-height:1.6;border:1px solid rgba(245,166,35,0.2);border-radius:4px;padding:8px 10px;background:rgba(245,166,35,0.04);">
-          ⚠ Autopilot executes real trades in your Tradier account under your direction. You are responsible for all positions and outcomes. Not suitable for all investors. Autopilot beta limited to a small initial cohort. See full disclaimer below.
+          ⚠ Autopilot executes real trades in your own Tradier account under your direction. You are responsible for all positions and outcomes. Not suitable for all investors.
         </p>
+      </div>
+
+      <!-- PRO -->
+      <div class="price-card">
+        <div class="price-tier">Advanced</div>
+        <div class="price-name">Pro</div>
+        <div class="price-amount">$199<span>/mo</span></div>
+        <div class="price-desc" style="min-height:auto;">or $1,990/yr (2 months free). 14-day free trial.</div>
+        <ul class="price-features">
+          <li>Everything in Autopilot</li>
+          <li>Iron Condor + LEAP strategies</li>
+          <li>Up to 100 watchlist symbols</li>
+          <li>Custom per-symbol configuration</li>
+          <li>Up to 3 broker accounts included</li>
+          <li>24 months of trade history</li>
+          <li>Priority support</li>
+          <li class="dim">API access — in development</li>
+        </ul>
+        <button class="btn-tier outline" onclick="window.location.href='https://app.wheelbot.io/sign-up?plan=pro'">Start 14-day trial →</button>
       </div>
 
     </div>
@@ -1260,37 +1265,41 @@
       <div style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:16px;">Which one is right for you?</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
         <div>
-          <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Choose Signal if...</div>
+          <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Choose Starter if...</div>
           <ul style="list-style:none;font-size:0.82rem;color:var(--muted);line-height:2;">
-            <li>→ You want ideas, not automation</li>
-            <li>→ You use any broker (not just Tradier)</li>
-            <li>→ You prefer manual execution</li>
+            <li>→ You want the Wheel automated, on paper first</li>
+            <li>→ You're proving the rules before risking capital</li>
+            <li>→ A focused 5-symbol watchlist is enough</li>
             <li>→ You're just starting out</li>
-          </ul>
-        </div>
-        <div>
-          <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Choose Journal if...</div>
-          <ul style="list-style:none;font-size:0.82rem;color:var(--muted);line-height:2;">
-            <li>→ You already trade actively</li>
-            <li>→ You want to understand your edge</li>
-            <li>→ You break your own rules sometimes</li>
-            <li>→ You want data, not automation</li>
           </ul>
         </div>
         <div>
           <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Choose Autopilot if...</div>
           <ul style="list-style:none;font-size:0.82rem;color:var(--muted);line-height:2;">
-            <li>→ You have a Tradier account</li>
+            <li>→ You have a Tradier account and want live trading</li>
             <li>→ You miss entries due to schedule</li>
-            <li>→ You want your own rules executed automatically, without manual intervention</li>
-            <li>→ You're comfortable with algo trading</li>
+            <li>→ You want AI briefings + IV Rank + alerts</li>
+            <li>→ You want your own rules executed automatically</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Choose Pro if...</div>
+          <ul style="list-style:none;font-size:0.82rem;color:var(--muted);line-height:2;">
+            <li>→ You trade Iron Condors or LEAPs too</li>
+            <li>→ You run a wide (up to 100-symbol) universe</li>
+            <li>→ You want per-symbol tuning + multiple accounts</li>
+            <li>→ You want priority support</li>
           </ul>
         </div>
       </div>
     </div>
 
     <p style="color:var(--muted);margin-top:24px;font-size:0.82rem;max-width:720px;line-height:1.8;">
-      ⚠ None of these tiers are live products yet. This is a waitlist to gauge interest and prioritize what to build. Autopilot (Option C) requires a Tradier brokerage account and executes real trades — it does not manage your money as an advisor, it automates your own account under your own direction. Pricing shown is indicative only.
+      ⚠ WheelBot is self-directed automation software, not an investment adviser. Live trading requires your own
+      Tradier brokerage account and executes real trades under your own direction — WheelBot does not manage your
+      money, select securities for you, or override your parameters. Options trading is not suitable for all
+      investors. Read the full <a href="https://app.wheelbot.io/terms" style="color:var(--green);">Terms &amp; Risk Disclosure</a>
+      and the OCC's <a href="https://www.theocc.com/company-information/documents-and-archives/options-disclosure-document" style="color:var(--green);" target="_blank" rel="noopener">Characteristics &amp; Risks of Standardized Options</a> before trading.
     </p>
   </div>
 </section>
@@ -1324,25 +1333,28 @@
 <!-- FINAL CTA -->
 <section>
   <div class="section-inner" style="text-align:center; padding: 100px 40px;">
-    <div class="section-label">Waitlist Open</div>
+    <div class="section-label">Get Started</div>
     <h2 style="margin-bottom:16px;">Stop Leaving Premium<br>on the Table.</h2>
     <p style="color:var(--muted); max-width:520px; margin:0 auto 16px; font-size:0.95rem;">
-      One form covers all three tiers — tell us which option you want and we'll reach out when it's ready.
-      Early members get first access and direct input on the roadmap.
+      Pick a plan and start a free trial — Starter on paper, Autopilot or Pro on your own live account.
+      Not ready? Grab the free Daily Signal and see the engine first.
     </p>
     <p style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--amber);margin:0 auto 24px;max-width:520px;letter-spacing:.04em;">
-      ⚠ Autopilot beta is limited to a small initial cohort. Takes 60 seconds to join.
+      ⚠ Card required for the trial. Cancel anytime. Options trading is not suitable for all investors.
     </p>
     <!-- Tier pills -->
     <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px;">
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--border);color:var(--muted);">A · Daily Signal · Free</span>
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--border);color:var(--muted);">B · Trade Journal · Paid</span>
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--green);color:var(--green);background:var(--green-dim);">C · Autopilot · Premium</span>
+      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--border);color:var(--muted);">Starter · $49/mo</span>
+      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--green);color:var(--green);background:var(--green-dim);">Autopilot · $99/mo</span>
+      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--border);color:var(--muted);">Pro · $199/mo</span>
     </div>
-    <a href="#" class="btn-primary" data-tally-open="0QvlNB" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" style="font-size:1.05rem; padding:18px 40px;">
-      ⚡ Join the Waitlist
+    <a href="https://app.wheelbot.io/sign-up" class="btn-primary" style="font-size:1.05rem; padding:18px 40px;">
+      ⚡ Start free trial
     </a>
-    <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted);margin-top:16px;letter-spacing:.04em;">No spam · No credit card · Unsubscribe anytime</p>
+    <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted);margin-top:16px;letter-spacing:.04em;">
+      Free trial · Card required · Cancel anytime ·
+      <a href="#pricing" data-tally-open="0QvlNB" data-tally-overlay="1" style="color:var(--green);">or get the free Daily Signal</a>
+    </p>
   </div>
 </section>
 
