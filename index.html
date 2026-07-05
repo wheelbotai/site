@@ -1194,51 +1194,34 @@
 
     <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 980px;">
 
-      <!-- STARTER -->
-      <div class="price-card">
-        <div class="price-tier">Entry tier</div>
-        <div class="price-name">Starter</div>
-        <div class="price-amount">$49<span>/mo</span></div>
-        <div class="price-desc" style="min-height:auto;">or $490/yr (2 months free). 14-day free trial.</div>
-        <ul class="price-features">
-          <li>Self-directed automated <strong>CSP + covered calls</strong> on your account</li>
-          <li>Up to 5 watchlist symbols</li>
-          <li>Up to 5 concurrent positions</li>
-          <li>Daily IV-Rank + delta + VIX-gated scan</li>
-          <li>Live Greeks via ORATS — delta-targeted strikes</li>
-          <li>Limit-order price-walk for best fills</li>
-          <li>Auto-roll: delta breach, earnings, expiry</li>
-          <li>Hard stops, profit targets &amp; trailing stops</li>
-          <li>AI morning briefing + EOD journal review</li>
-          <li>Kill switch — close all positions instantly</li>
-          <li>1 connected brokerage account</li>
-        </ul>
-        <button class="btn-tier outline" onclick="window.location.href='#invite'">Request an Invite →</button>
-      </div>
-
-      <!-- AUTOPILOT — FEATURED -->
+      <!-- AUTOPILOT — FEATURED (entry tier) -->
       <div class="price-card featured">
         <div class="price-tier">Most chosen</div>
         <div class="price-name">Autopilot</div>
         <div class="price-amount">$99<span>/mo</span></div>
         <div class="price-desc" style="min-height:auto;">or $990/yr (2 months free). 14-day free trial.</div>
         <ul class="price-features">
-          <li><strong>Everything in Starter</strong></li>
+          <li>Self-directed automated <strong>CSP + covered calls</strong> on your account</li>
+          <li>Live + paper trading</li>
           <li>Up to 15 watchlist symbols</li>
           <li>Up to 15 concurrent positions</li>
-          <li><strong>Historical backtester</strong> — validate your config against past regimes</li>
-          <li>LEAP secondary + Short-DTE strategy modules</li>
-          <li>+$29/mo per additional connected account (up to 2)</li>
+          <li>Daily delta + VIX-gated scan</li>
+          <li>Limit-order price-walk for best fills</li>
+          <li>Auto-roll: delta breach, earnings, expiry</li>
+          <li>Hard stops, profit targets &amp; trailing stops</li>
+          <li>Kill switch — close all positions instantly</li>
+          <li>Daily email digest of bot activity</li>
+          <li>1 connected account (+$29/mo each, up to 2)</li>
         </ul>
         <button class="btn-tier primary" onclick="window.location.href='#invite'">Request an Invite →</button>
         <p style="font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--amber);margin-top:10px;line-height:1.6;border:1px solid rgba(245,166,35,0.2);border-radius:4px;padding:8px 10px;background:rgba(245,166,35,0.04);">
-          ⚠ All plans place real trades in your own brokerage account under your direction. You are responsible for all positions and outcomes. Not suitable for all investors.
+          ⚠ Both plans place real trades in your own brokerage account under your direction. You are responsible for all positions and outcomes. Not suitable for all investors.
         </p>
       </div>
 
       <!-- PRO -->
       <div class="price-card">
-        <div class="price-tier">Maximum scale</div>
+        <div class="price-tier">Full toolset</div>
         <div class="price-name">Pro</div>
         <div class="price-amount">$199<span>/mo</span></div>
         <div class="price-desc" style="min-height:auto;">or $1,990/yr (2 months free). 14-day free trial.</div>
@@ -1246,9 +1229,12 @@
           <li><strong>Everything in Autopilot</strong></li>
           <li>Up to 100 watchlist symbols</li>
           <li>Up to 40 concurrent positions</li>
-          <li><strong>Strategy optimizer</strong> — search your parameter ranges over history; you review and apply</li>
-          <li>Iron Condor strategy module</li>
-          <li>Priority scan cadence + higher backtest/optimizer quotas</li>
+          <li><strong>AI morning briefing + EOD journal review</strong></li>
+          <li>IV Rank, percentile &amp; earnings-risk calendar</li>
+          <li>Slack alerts + tap-to-approve manual approvals</li>
+          <li>Iron Condor, LEAP &amp; PMCC strategy modules</li>
+          <li>Tax estimates + leveraged ETF access</li>
+          <li>Priority scan cadence + higher quotas</li>
           <li>+$39/mo per additional connected account (up to 5)</li>
           <li class="dim">API access — in development</li>
         </ul>
@@ -1264,41 +1250,33 @@
 
     <!-- Comparison callout -->
     <div style="margin-top:40px;background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:28px 32px;max-width:980px;">
-      <div style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:16px;">Same engine — pick your scale</div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:16px;">Same engine — pick your depth</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
-        <div>
-          <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Choose Starter if...</div>
-          <ul style="list-style:none;font-size:0.82rem;color:var(--muted);line-height:2;">
-            <li>→ You run a focused book (≤5 names, ≤5 positions)</li>
-            <li>→ You want full automation without paying for scale</li>
-            <li>→ You're getting comfortable with hands-off execution</li>
-          </ul>
-        </div>
         <div>
           <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Choose Autopilot if...</div>
           <ul style="list-style:none;font-size:0.82rem;color:var(--muted);line-height:2;">
-            <li>→ You're diversifying across more names (up to 15)</li>
-            <li>→ You want to backtest your config before committing</li>
-            <li>→ You want LEAP and Short-DTE alongside the core wheel</li>
+            <li>→ You want the automated wheel running live on your account</li>
+            <li>→ A focused book (up to 15 names / 15 positions) fits you</li>
+            <li>→ You want hard stops + kill switch, not extra bells</li>
           </ul>
         </div>
         <div>
           <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Choose Pro if...</div>
           <ul style="list-style:none;font-size:0.82rem;color:var(--muted);line-height:2;">
+            <li>→ You want the AI analyst, IV Rank &amp; earnings signals</li>
+            <li>→ You run advanced strategies (Iron Condor, LEAP, PMCC)</li>
             <li>→ You run a large book (up to 100 symbols / 40 positions)</li>
-            <li>→ You want the optimizer to explore your parameter space</li>
-            <li>→ You treat this like a business and want the full toolset</li>
           </ul>
         </div>
       </div>
       <p style="color:var(--muted);margin-top:20px;font-size:0.82rem;line-height:1.7;">
-        All three execute your rules automatically on your own account. The difference is <strong style="color:var(--text);">how much</strong>
-        you run, not <strong style="color:var(--text);">whether</strong> it's automated.
+        Both execute your rules automatically on your own account. The difference is <strong style="color:var(--text);">how much intelligence and scale</strong>
+        you want, not <strong style="color:var(--text);">whether</strong> it's automated.
       </p>
     </div>
 
     <p style="color:var(--muted);margin-top:24px;font-size:0.82rem;max-width:720px;line-height:1.8;">
-      ⚠ WheelBot is self-directed automation software, not an investment adviser. All plans place real trades in your own
+      ⚠ WheelBot is self-directed automation software, not an investment adviser. Both plans place real trades in your own
       brokerage account under your own direction — WheelBot does not manage your money, select securities for you, or
       override your parameters. Options trading is not suitable for all investors. Launch access is invite-only and
       limited to a capacity-gated initial cohort. Read the full
@@ -1350,7 +1328,6 @@
     </p>
     <!-- Tier pills -->
     <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px;">
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--border);color:var(--muted);">Starter · $49/mo</span>
       <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--green);color:var(--green);background:var(--green-dim);">Autopilot · $99/mo</span>
       <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--border);color:var(--muted);">Pro · $199/mo</span>
     </div>
