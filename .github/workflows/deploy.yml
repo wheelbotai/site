@@ -1,7 +1,11 @@
 name: Deploy — wheelbot.io
 
-# Deploys to Cloudflare Pages production on semver tag push (v*).
-# Tags are pushed automatically by "Release — Auto Tag" after CI passes on main.
+# Deploys to Cloudflare Pages production after "Release — Auto Tag" succeeds.
+# Chain: push to main → "CI — wheelbot.io" → "Release — Auto Tag" → this deploy.
+# We trigger on workflow_run (not on tag push) because tags pushed by Auto-Tag
+# with the default GITHUB_TOKEN do NOT fire a `push: tags` workflow (GitHub's
+# recursion guard) — that silently left the site stale. workflow_run events are
+# not subject to that guard, so this fires reliably with no PAT to manage.
 # Manual dispatch lets you force a deploy.
 #
 # Validation runs separately in "CI — wheelbot.io" on every push to main.
@@ -11,9 +15,10 @@ name: Deploy — wheelbot.io
 #   CF_ACCOUNT_ID  — Cloudflare account ID
 
 on:
-  push:
-    tags:
-      - "v*"
+  workflow_run:
+    workflows: ["Release — Auto Tag"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -21,6 +26,10 @@ jobs:
     name: Deploy to Cloudflare Pages
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    # Deploy on manual dispatch, or when the upstream Auto-Tag run succeeded.
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
     permissions:
       contents: read
       deployments: write
