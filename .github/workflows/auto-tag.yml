@@ -37,7 +37,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.DEPLOY_DISPATCH_TOKEN || secrets.GITHUB_TOKEN }}
+          # Default GITHUB_TOKEN is sufficient — deploy fires via workflow_run on
+          # this run's completion, not a `push: tags` trigger, so no PAT is needed.
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Compute next tag
         id: next
