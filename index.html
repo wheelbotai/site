@@ -7,8 +7,8 @@
      screen (iPhone included). NOTE: this is the public marketing page — locking
      zoom is an accessibility trade-off; revert this one tag if it hurts UX/SEO. -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>WheelBot — AI-Powered Wheel Strategy Automation</title>
-<meta name="description" content="WheelBot automates the options Wheel strategy — self-directed CSP and covered-call execution with VIX filtering, ORATS IV-Rank data, and systematic strike selection. Two plans, your rules, your account.">
+<title>WheelBot — Automated Wheel Strategy Execution</title>
+<meta name="description" content="WheelBot automates the options Wheel strategy — self-directed CSP and covered-call execution with VIX filtering, live IV-Rank data, and systematic strike selection. Two plans, your rules, your account.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -1017,7 +1017,7 @@
     <div class="hero-badge" role="status">Invite-Only Launch — Capacity-Gated Cohort</div>
     <h1>The Wheel<br>Strategy.<br><span class="accent">Systematized.<br>Automated.</span></h1>
     <p class="hero-sub">
-      Never miss a morning entry. Never hold a loser past your rules.
+      Runs the morning entry window whether or not you are at the desk, and exits when your rules say exit.
       WheelBot runs the rules <strong>you</strong> configure — scanning your watchlist, evaluating strikes against your parameters, placing limit orders, and managing exits —
       <strong>on your own brokerage account, with your money, under your direction</strong>.
     </p>
@@ -1131,7 +1131,7 @@
       <div class="step">
         <div class="step-num">02</div>
         <div class="step-title">Strike Evaluation</div>
-        <div class="step-desc">Live Greeks from ORATS are used to evaluate candidate strikes against your configured delta range and DTE window. MACD phase and support/resistance checks run as additional filters you can enable or disable.</div>
+        <div class="step-desc">Live Greeks from our market-data provider are used to evaluate candidate strikes against your configured delta range and DTE window. MACD phase and support/resistance checks run as additional filters you can enable or disable.</div>
       </div>
       <div class="step">
         <div class="step-num">03</div>
@@ -1157,8 +1157,8 @@
   <div style="background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:8px;padding:22px 28px;display:flex;align-items:flex-start;gap:16px;">
     <span style="font-size:1.1rem;margin-top:1px;flex-shrink:0;">⚡</span>
     <div>
-      <span style="color:var(--white);font-size:0.92rem;font-weight:500;">Unlike weekly put-selling bots, WheelBot targets 21–45 DTE with live IV Rank filtering — more premium, less whipsaw.</span>
-      <span style="color:var(--muted);font-size:0.85rem;margin-left:8px;">VIX-gated, ORATS-sourced, delta-targeted — not just sell-the-closest-expiry.</span>
+      <span style="color:var(--white);font-size:0.92rem;font-weight:500;">WheelBot targets 21–45 DTE with live IV Rank filtering, rather than selling the nearest expiry.</span>
+      <span style="color:var(--muted);font-size:0.85rem;margin-left:8px;">VIX-gated, delta-targeted, and driven entirely by thresholds you set.</span>
     </div>
   </div>
 </div>
@@ -1172,8 +1172,9 @@
     <h2>One Engine.<br>Two Sizes. Your Rules.</h2>
     <p style="color:var(--muted);max-width:660px;margin-bottom:16px;font-size:0.95rem;">
       Every plan is the <strong style="color:var(--text);">same self-directed automation engine</strong> — full CSP +
-      covered-call execution on your own brokerage account. Plans differ by <strong style="color:var(--text);">scale</strong>:
-      how many symbols you watch and how many positions you run at once. You configure everything; WheelBot executes the
+      covered-call execution on your own brokerage account, with the same 25-symbol / 25-position engine on both.
+      Plans differ by <strong style="color:var(--text);">capability</strong>: which strategies, signals and integrations
+      you get, and how many brokerage accounts you connect. You configure everything; WheelBot executes the
       rules you set. WheelBot does not select securities for you, advise on suitability, or override your parameters.
     </p>
     <!-- Status bar -->
@@ -1182,12 +1183,12 @@
       <div style="width:1px;height:20px;background:var(--border);"></div>
       <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);">No free tier · no "unlimited" tiers · flat monthly fee</span>
       <div style="width:1px;height:20px;background:var(--border);"></div>
-      <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);">14-day trial · card required · cancel anytime</span>
+      <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);"><span class="trial-days">60</span>-day trial · card required · cancel anytime</span>
     </div>
 
     <!-- Trial note -->
     <p style="color:var(--muted);max-width:760px;margin-bottom:32px;font-size:0.84rem;line-height:1.7;">
-      <strong style="color:var(--text);">Try it first:</strong> every plan starts with a <strong style="color:var(--text);">14-day trial</strong>,
+      <strong style="color:var(--text);">Try it first:</strong> every plan starts with a <strong style="color:var(--text);"><span class="trial-days">60</span>-day trial</strong>,
       then bills at the plan price. A card is required at signup; your trial and billing are managed by Stripe —
       cancel anytime before it ends and you won't be charged.
     </p>
@@ -1199,23 +1200,23 @@
         <div class="price-tier">Most chosen</div>
         <div class="price-name">Autopilot</div>
         <div class="price-amount">$99<span>/mo</span></div>
-        <div class="price-desc" style="min-height:auto;">or $990/yr (2 months free). 14-day free trial.</div>
+        <div class="price-desc" style="min-height:auto;">or $990/yr (2 months free). <span class="trial-days">60</span>-day free trial.</div>
         <ul class="price-features">
           <li>Self-directed automated <strong>CSP + covered calls</strong> on your account</li>
           <li>Live + paper trading</li>
-          <li>Up to 15 watchlist symbols</li>
-          <li>Up to 15 concurrent positions</li>
+          <li>Up to 25 watchlist symbols</li>
+          <li>Up to 25 concurrent positions</li>
           <li>Daily delta + VIX-gated scan</li>
-          <li>Limit-order price-walk for best fills</li>
+          <li>Limit orders walked to improve fills</li>
           <li>Auto-roll: delta breach, earnings, expiry</li>
-          <li>Hard stops, profit targets &amp; trailing stops</li>
-          <li>Kill switch — close all positions instantly</li>
+          <li>Stop levels, profit targets &amp; trailing stops</li>
+          <li>Kill switch — submits closing orders for every open position</li>
           <li>Daily email digest of bot activity</li>
           <li>1 connected account (+$29/mo each, up to 2)</li>
         </ul>
         <button class="btn-tier primary" onclick="window.location.href='#invite'">Request an Invite →</button>
         <p style="font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--amber);margin-top:10px;line-height:1.6;border:1px solid rgba(245,166,35,0.2);border-radius:4px;padding:8px 10px;background:rgba(245,166,35,0.04);">
-          ⚠ Both plans place real trades in your own brokerage account under your direction. You are responsible for all positions and outcomes. Not suitable for all investors.
+          ⚠ Both plans place real trades in your own brokerage account under your direction. You are responsible for all positions and outcomes. Stop levels and profit targets are order instructions, not guarantees — they do not guarantee an execution price, and gaps can fill beyond them. Not suitable for all investors.
         </p>
       </div>
 
@@ -1224,18 +1225,17 @@
         <div class="price-tier">Full toolset</div>
         <div class="price-name">Pro</div>
         <div class="price-amount">$199<span>/mo</span></div>
-        <div class="price-desc" style="min-height:auto;">or $1,990/yr (2 months free). 14-day free trial.</div>
+        <div class="price-desc" style="min-height:auto;">or $1,990/yr (2 months free). <span class="trial-days">60</span>-day free trial.</div>
         <ul class="price-features">
           <li><strong>Everything in Autopilot</strong></li>
-          <li>Up to 100 watchlist symbols</li>
-          <li>Up to 40 concurrent positions</li>
+          <li>Same 25-symbol / 25-position engine as Autopilot</li>
           <li><strong>AI morning briefing + EOD journal review</strong></li>
           <li>IV Rank, percentile &amp; earnings-risk calendar</li>
           <li>Slack alerts + tap-to-approve manual approvals</li>
           <li>Iron Condor, LEAP &amp; PMCC strategy modules</li>
           <li>Tax estimates + leveraged ETF access</li>
           <li>Priority scan cadence + higher quotas</li>
-          <li>+$39/mo per additional connected account (up to 5)</li>
+          <li>3 connected accounts included (+$49/mo each, up to 5)</li>
           <li class="dim">API access — in development</li>
         </ul>
         <button class="btn-tier outline" onclick="window.location.href='#invite'">Request an Invite →</button>
@@ -1245,19 +1245,20 @@
 
     <p style="color:var(--muted);margin-top:20px;font-size:0.82rem;max-width:760px;line-height:1.7;">
       <strong style="color:var(--text);">Add-on:</strong> connect more than one brokerage account — +$29/mo each on
-      Autopilot (up to 2 total) or +$39/mo each on Pro (up to 5 total). Each account runs as its own isolated bot.
+      Autopilot (1 included, up to 2 total) or +$49/mo each on Pro (3 included, up to 5 total). Each account runs as
+      its own isolated bot.
     </p>
 
     <!-- Comparison callout -->
     <div style="margin-top:40px;background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:28px 32px;max-width:980px;">
-      <div style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:16px;">Same engine — pick your depth</div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:16px;">Same engine — pick your toolset</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
         <div>
           <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Choose Autopilot if...</div>
           <ul style="list-style:none;font-size:0.82rem;color:var(--muted);line-height:2;">
             <li>→ You want the automated wheel running live on your account</li>
-            <li>→ A focused book (up to 15 names / 15 positions) fits you</li>
-            <li>→ You want hard stops + kill switch, not extra bells</li>
+            <li>→ A 25-symbol / 25-position book is all you need</li>
+            <li>→ You want stop levels + kill switch, not extra bells</li>
           </ul>
         </div>
         <div>
@@ -1265,13 +1266,14 @@
           <ul style="list-style:none;font-size:0.82rem;color:var(--muted);line-height:2;">
             <li>→ You want the AI analyst, IV Rank &amp; earnings signals</li>
             <li>→ You run advanced strategies (Iron Condor, LEAP, PMCC)</li>
-            <li>→ You run a large book (up to 100 symbols / 40 positions)</li>
+            <li>→ You connect several brokerage accounts, or want longer data retention</li>
           </ul>
         </div>
       </div>
       <p style="color:var(--muted);margin-top:20px;font-size:0.82rem;line-height:1.7;">
-        Both execute your rules automatically on your own account. The difference is <strong style="color:var(--text);">how much intelligence and scale</strong>
-        you want, not <strong style="color:var(--text);">whether</strong> it's automated.
+        Both execute your rules automatically on your own account, with the same symbol and position caps. The
+        difference is <strong style="color:var(--text);">which capabilities</strong> you get — not
+        <strong style="color:var(--text);">how much</strong> you can trade.
       </p>
     </div>
 
@@ -1320,7 +1322,7 @@
     <p style="color:var(--muted); max-width:560px; margin:0 auto 16px; font-size:0.95rem;">
       WheelBot is launching to a <strong style="color:var(--text);">capacity-gated initial cohort</strong>. Request an
       invite and tell us which plan fits — we'll reach out as spots open. When you're in, you start your plan through
-      secure Stripe checkout, which begins your 14-day trial; you won't be charged until it ends, and you can cancel
+      secure Stripe checkout, which begins your <span class="trial-days">60</span>-day trial; you won't be charged until it ends, and you can cancel
       anytime before then.
     </p>
     <p style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--amber);margin:0 auto 24px;max-width:560px;letter-spacing:.04em;">
@@ -1410,6 +1412,11 @@
       </a>
     </div>
   </div>
+  <div class="footer-legal-links" style="display:flex;gap:18px;flex-wrap:wrap;font-size:0.78rem;">
+    <a href="https://app.wheelbot.io/terms" target="_blank" rel="noopener noreferrer" style="color:var(--muted);">Terms &amp; Risk Disclosure</a>
+    <a href="https://app.wheelbot.io/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--muted);">Privacy Policy</a>
+    <a href="https://www.theocc.com/company-information/documents-and-archives/options-disclosure-document" target="_blank" rel="noopener noreferrer" style="color:var(--muted);">OCC Options Disclosure</a>
+  </div>
   <div class="footer-note" style="line-height:1.8;">
     © 2026 WheelBot LLC · Not financial advice · Not an investment advisor · All trading decisions are yours · Past performance does not guarantee future results<br>
     WheelBot is a self-directed trading automation tool. It executes rules configured by each user. It does not provide investment advice, select securities on behalf of users, or manage assets.
@@ -1417,6 +1424,19 @@
 </footer>
 
 <script>
+  // ── TRIAL LENGTH — single source for this page ───────────────────────────
+  // Change this ONE number to re-price the trial everywhere on the site.
+  // It MUST match WB_TRIAL_DAYS in platform/api/routers/billing.py, which is
+  // the value actually handed to Stripe as trial_period_days. If the two ever
+  // disagree, the site is advertising a trial the billing system won't honor —
+  // that exact drift (site 14 / Stripe 60) is what this constant exists to stop.
+  // The inline number in each <span class="trial-days"> is the no-JS fallback;
+  // update it with a find-replace if you change the number below.
+  var WB_TRIAL_DAYS = 60;
+  document.querySelectorAll('.trial-days').forEach(function (el) {
+    el.textContent = String(WB_TRIAL_DAYS);
+  });
+
   // Tally.so handles the waitlist form via data-tally-open attributes on buttons.
   // After creating your form at tally.so, replace 0QvlNB with your form code.
   // Example: data-tally-open="wbkXyz" — the code is in your Tally share URL.
