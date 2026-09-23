@@ -1168,74 +1168,79 @@
 <!-- PRICING -->
 <section id="pricing">
   <div class="section-inner">
-    <div class="section-label">Plans</div>
-    <h2>One Engine.<br>Two Sizes. Your Rules.</h2>
+    <div class="section-label">Pricing</div>
+    <h2>One Plan.<br>Every Strategy. Your Rules.</h2>
     <p style="color:var(--muted);max-width:660px;margin-bottom:16px;font-size:0.95rem;">
-      Every plan is the <strong style="color:var(--text);">same self-directed automation engine</strong> — full CSP +
-      covered-call execution on your own brokerage account, with the same 25-symbol / 25-position engine on both.
-      Plans differ by <strong style="color:var(--text);">capability</strong>: which strategies, signals and integrations
-      you get, and how many brokerage accounts you connect. You configure everything; WheelBot executes the
-      rules you set. WheelBot does not select securities for you, advise on suitability, or override your parameters.
+      There is one WheelBot plan and it includes <strong style="color:var(--text);">everything</strong> — the
+      self-directed automation engine, every strategy module, every signal and integration, on your own brokerage
+      account. You configure everything; WheelBot executes the rules you set. WheelBot does not select securities
+      for you, advise on suitability, or override your parameters.
     </p>
     <!-- Status bar -->
     <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:32px;">
-      <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--green);">✓ Tradier API · live · more brokerages rolling out</span>
+      <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--green);">✓ Tradier &amp; tastytrade · live · more brokerages rolling out</span>
       <div style="width:1px;height:20px;background:var(--border);"></div>
-      <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);">No free tier · no "unlimited" tiers · flat monthly fee</span>
+      <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);">No free tier · no "unlimited" · flat monthly fee</span>
       <div style="width:1px;height:20px;background:var(--border);"></div>
       <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);"><span class="trial-days">60</span>-day trial · card required · cancel anytime</span>
     </div>
 
     <!-- Trial note -->
     <p style="color:var(--muted);max-width:760px;margin-bottom:32px;font-size:0.84rem;line-height:1.7;">
-      <strong style="color:var(--text);">Try it first:</strong> every plan starts with a <strong style="color:var(--text);"><span class="trial-days">60</span>-day trial</strong>,
-      then bills at the plan price. A card is required at signup; your trial and billing are managed by Stripe —
+      <strong style="color:var(--text);">Try it first:</strong> the plan starts with a <strong style="color:var(--text);"><span class="trial-days">60</span>-day trial</strong>,
+      then bills at your plan price. A card is required at signup; your trial and billing are managed by Stripe —
       cancel anytime before it ends and you won't be charged.
     </p>
 
-    <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 980px;">
+    <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 980px;">
 
-      <!-- AUTOPILOT — FEATURED (entry tier) -->
-      <div class="price-card featured">
-        <div class="price-tier">Most chosen</div>
-        <div class="price-name">Autopilot</div>
+      <!-- FOUNDING MEMBER — the same plan at the launch price. Hidden by the
+           script below once the platform reports zero seats left. -->
+      <div class="price-card featured" id="founderCard">
+        <div class="price-tier">Founding member</div>
+        <div class="price-name">WheelBot</div>
         <div class="price-amount">$99<span>/mo</span></div>
         <div class="price-desc" style="min-height:auto;">or $990/yr (2 months free). <span class="trial-days">60</span>-day free trial.</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--green);margin:10px 0 14px;letter-spacing:.04em;">
+          Locked for life · <span id="founderSeats">first 25 members</span> · standard price $199/mo after
+        </div>
         <ul class="price-features">
+          <li><strong>Everything</strong> — same plan, same features, founder price</li>
           <li>Self-directed automated <strong>CSP + covered calls</strong> on your account</li>
-          <li>Live + paper trading</li>
-          <li>Up to 25 watchlist symbols</li>
-          <li>Up to 25 concurrent positions</li>
-          <li>Daily delta + VIX-gated scan</li>
-          <li>Limit orders walked to improve fills</li>
-          <li>Auto-roll: delta breach, earnings, expiry</li>
-          <li>Stop levels, profit targets &amp; trailing stops</li>
-          <li>Kill switch — submits closing orders for every open position</li>
-          <li class="dim">Daily email digest of bot activity — not yet enabled</li>
-          <li>1 connected account</li>
+          <li>Credit spreads, Iron Condor, LEAP &amp; leveraged covered calls (PMCC)</li>
+          <li>AI morning briefing + EOD journal review</li>
+          <li>IV Rank, percentile &amp; earnings-risk calendar</li>
+          <li>Slack alerts + tap-to-approve manual approvals</li>
+          <li>Live + paper trading · up to 25 symbols / 25 positions</li>
+          <li>Auto-roll, stop levels, profit targets &amp; kill switch</li>
+          <li>1 connected brokerage account</li>
         </ul>
         <button class="btn-tier primary" onclick="window.location.href='#invite'">Request an Invite →</button>
         <p style="font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--amber);margin-top:10px;line-height:1.6;border:1px solid rgba(245,166,35,0.2);border-radius:4px;padding:8px 10px;background:rgba(245,166,35,0.04);">
-          ⚠ Both plans place real trades in your own brokerage account under your direction. You are responsible for all positions and outcomes. Stop levels and profit targets are order instructions, not guarantees — they do not guarantee an execution price, and gaps can fill beyond them. Not suitable for all investors.
+          ⚠ WheelBot places real trades in your own brokerage account under your direction. You are responsible for all positions and outcomes. Stop levels and profit targets are order instructions, not guarantees — they do not guarantee an execution price, and gaps can fill beyond them. Not suitable for all investors.
         </p>
       </div>
 
-      <!-- PRO -->
-      <div class="price-card">
-        <div class="price-tier">Full toolset</div>
-        <div class="price-name">Pro</div>
+      <!-- STANDARD — the same plan at the ongoing price. Becomes the featured
+           card once founding seats are gone. -->
+      <div class="price-card" id="standardCard">
+        <div class="price-tier">Standard</div>
+        <div class="price-name">WheelBot</div>
         <div class="price-amount">$199<span>/mo</span></div>
         <div class="price-desc" style="min-height:auto;">or $1,990/yr (2 months free). <span class="trial-days">60</span>-day free trial.</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--muted);margin:10px 0 14px;letter-spacing:.04em;">
+          The same plan, once founding seats are gone
+        </div>
         <ul class="price-features">
-          <li><strong>Everything in Autopilot</strong></li>
-          <li>Same 25-symbol / 25-position engine as Autopilot</li>
-          <li><strong>AI morning briefing + EOD journal review</strong></li>
+          <li><strong>Everything</strong> in the plan — identical features</li>
+          <li>Self-directed automated <strong>CSP + covered calls</strong> on your account</li>
+          <li>Credit spreads, Iron Condor, LEAP &amp; leveraged covered calls (PMCC)</li>
+          <li>AI morning briefing + EOD journal review</li>
           <li>IV Rank, percentile &amp; earnings-risk calendar</li>
           <li>Slack alerts + tap-to-approve manual approvals</li>
-          <li>Iron Condor, LEAP &amp; PMCC strategy modules</li>
-          <li>Leveraged ETF access</li>
-          <li>Priority scan cadence + higher quotas</li>
-          <li>1 connected account</li>
+          <li>Live + paper trading · up to 25 symbols / 25 positions</li>
+          <li>Auto-roll, stop levels, profit targets &amp; kill switch</li>
+          <li>1 connected brokerage account</li>
           <li class="dim">API access — in development</li>
         </ul>
         <button class="btn-tier outline" onclick="window.location.href='#invite'">Request an Invite →</button>
@@ -1243,36 +1248,35 @@
 
     </div>
 
-    <!-- Comparison callout -->
+    <!-- What "one plan" means -->
     <div style="margin-top:40px;background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:28px 32px;max-width:980px;">
-      <div style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:16px;">Same engine — pick your toolset</div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:16px;">One plan — two prices, nothing gated</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
         <div>
-          <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Choose Autopilot if...</div>
+          <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Founding members</div>
           <ul style="list-style:none;font-size:0.82rem;color:var(--muted);line-height:2;">
-            <li>→ You want the automated wheel running live on your account</li>
-            <li>→ A 25-symbol / 25-position book is all you need</li>
-            <li>→ You want stop levels + kill switch, not extra bells</li>
+            <li>→ The first 25 subscribers</li>
+            <li>→ $99/mo, locked for as long as you stay subscribed</li>
+            <li>→ Every feature, today and as new ones ship</li>
           </ul>
         </div>
         <div>
-          <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Choose Pro if...</div>
+          <div style="font-weight:600;color:var(--white);font-size:0.9rem;margin-bottom:8px;">Everyone after</div>
           <ul style="list-style:none;font-size:0.82rem;color:var(--muted);line-height:2;">
-            <li>→ You want the AI analyst, IV Rank &amp; earnings signals</li>
-            <li>→ You run advanced strategies (Iron Condor, LEAP, PMCC)</li>
-            <li>→ You connect several brokerage accounts, or want longer data retention</li>
+            <li>→ $199/mo for the identical plan</li>
+            <li>→ No feature tiers, no "unlimited"</li>
+            <li>→ Cancel anytime; nothing is auto-upgraded</li>
           </ul>
         </div>
       </div>
       <p style="color:var(--muted);margin-top:20px;font-size:0.82rem;line-height:1.7;">
-        Both execute your rules automatically on your own account, with the same symbol and position caps. The
-        difference is <strong style="color:var(--text);">which capabilities</strong> you get — not
-        <strong style="color:var(--text);">how much</strong> you can trade.
+        The founder price is a launch offer on the same plan, not a discount on a price anyone has paid. It executes
+        your rules automatically on your own account with the same symbol and position caps as every other subscriber.
       </p>
     </div>
 
     <p style="color:var(--muted);margin-top:24px;font-size:0.82rem;max-width:720px;line-height:1.8;">
-      ⚠ WheelBot is self-directed automation software, not an investment adviser. Both plans place real trades in your own
+      ⚠ WheelBot is self-directed automation software, not an investment adviser. The plan places real trades in your own
       brokerage account under your own direction — WheelBot does not manage your money, select securities for you, or
       override your parameters. Options trading is not suitable for all investors. Launch access is invite-only and
       limited to a capacity-gated initial cohort. Read the full
@@ -1315,17 +1319,17 @@
     <h2 style="margin-bottom:16px;">Stop Leaving Premium<br>on the Table.</h2>
     <p style="color:var(--muted); max-width:560px; margin:0 auto 16px; font-size:0.95rem;">
       WheelBot is launching to a <strong style="color:var(--text);">capacity-gated initial cohort</strong>. Request an
-      invite and tell us which plan fits — we'll reach out as spots open. When you're in, you start your plan through
-      secure Stripe checkout, which begins your <span class="trial-days">60</span>-day trial; you won't be charged until it ends, and you can cancel
-      anytime before then.
+      invite — we'll reach out as spots open. When you're in, you start the plan through secure Stripe checkout,
+      which begins your <span class="trial-days">60</span>-day trial; you won't be charged until it ends, and you can cancel
+      anytime before then. The first 25 subscribers lock the founding-member price.
     </p>
     <p style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--amber);margin:0 auto 24px;max-width:560px;letter-spacing:.04em;">
       ⚠ Joining the list does not start a subscription, a trial, or any trades. Options trading is not suitable for all investors.
     </p>
-    <!-- Tier pills -->
+    <!-- Price pills — one plan, two prices -->
     <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px;">
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--green);color:var(--green);background:var(--green-dim);">Autopilot · $99/mo</span>
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--border);color:var(--muted);">Pro · $199/mo</span>
+      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--green);color:var(--green);background:var(--green-dim);">Founding member · $99/mo · locked for life</span>
+      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 12px;border-radius:20px;border:1px solid var(--border);color:var(--muted);">Standard · $199/mo</span>
     </div>
     <button class="btn-primary" style="font-size:1.05rem; padding:18px 40px; border:none; cursor:pointer;" data-tally-open="0QvlNB" data-tally-overlay="1" data-tally-emoji-text="⚡" data-tally-emoji-animation="wave">
       ⚡ Request an Invite
@@ -1430,6 +1434,33 @@
   document.querySelectorAll('.trial-days').forEach(function (el) {
     el.textContent = String(WB_TRIAL_DAYS);
   });
+
+  // ── FOUNDING SEATS — live from the platform ───────────────────────────────
+  // The seat count is derived server-side from real subscriptions, so the
+  // number here is the number checkout prices against. The inline text
+  // ("first 25 members") is the no-JS / offline fallback and never shows a
+  // count it cannot vouch for. When the offer is over, the founder card is
+  // hidden and the standard card becomes the featured one.
+  (function () {
+    var seats = document.getElementById('founderSeats');
+    var founder = document.getElementById('founderCard');
+    var standard = document.getElementById('standardCard');
+    if (!seats || !founder || !standard || !window.fetch) return;
+    fetch('https://platform.wheelbot.io/api/billing/founder-offer', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (o) {
+        if (!o) return;
+        if (o.active) {
+          seats.textContent = o.seats_left + ' of ' + o.seats_total + ' seats left';
+        } else {
+          founder.style.display = 'none';
+          standard.classList.add('featured');
+          var tier = standard.querySelector('.price-tier');
+          if (tier) tier.textContent = 'Founding seats are gone';
+        }
+      })
+      .catch(function () { /* fallback text stays */ });
+  })();
 
   // Tally.so handles the waitlist form via data-tally-open attributes on buttons.
   // After creating your form at tally.so, replace 0QvlNB with your form code.
