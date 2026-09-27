@@ -28,9 +28,16 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    # ── CD provider switch (`vars.WB_CD`) ──────────────────────────────────
+    #   unset / anything else -> GitHub deploys, exactly as before (fail-safe default)
+    #   "jenkins"             -> skipped; local Jenkins job wheelbot/deploy-site deploys
+    #                            instead, so the two can never race each other.
+    # workflow_dispatch stays allowed as a deliberate human escape hatch.
+    #   gh variable set WB_CD --body jenkins --repo wheelbotai/site
     if: >
       github.event_name == 'workflow_dispatch' ||
-      github.event.workflow_run.conclusion == 'success'
+      (vars.WB_CD != 'jenkins' &&
+      github.event.workflow_run.conclusion == 'success')
 
     steps:
       - name: Checkout (full history for tag inspection)
